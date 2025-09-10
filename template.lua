@@ -65,10 +65,18 @@ function install()
 
     log.info("verify indexrepos file: %s...", indexrepos_json)
 
+    xvm.add(package.namespace .. "-" .. package.name)
+
     return indexrepos[package.name]
 end
 
 function uninstall()
+
+    if pkgindex_repo_lists[package.name] then
+        log.warn("uninstall indexrepo: %s - %{yellow dim}sikp", package.name)
+        return true
+    end
+
     local indexrepos = json.loadfile(indexrepos_json)
     indexrepos[package.name] = nil
     json.savefile(indexrepos_json, indexrepos)
