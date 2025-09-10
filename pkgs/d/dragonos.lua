@@ -1,6 +1,6 @@
 package = {
 
-    homepage = "https://github.com/DragonOS-Community"
+    homepage = "https://github.com/DragonOS-Community",
 
     name = "dragonos",
     description = "xim package index for dragonos community",

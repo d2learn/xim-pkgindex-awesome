@@ -1,6 +1,6 @@
 package = {
 
-    homepage = "https://xlings.d2learn.org"
+    homepage = "https://xlings.d2learn.org",
 
     name = "xim",
     description = "xim package index - software, library, environment install/config ...",

@@ -1,6 +1,6 @@
 package = {
 
-    homepage = "https://xlings.d2learn.org"
+    homepage = "https://xlings.d2learn.org",
 
     name = "scode",
     description = "xim package index for source code",

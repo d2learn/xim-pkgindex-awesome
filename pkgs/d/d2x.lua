@@ -1,6 +1,6 @@
 package = {
 
-    homepage = "https://xlings.d2learn.org"
+    homepage = "https://xlings.d2learn.org",
 
     name = "d2x",
     description = "d2x project package index repository",
