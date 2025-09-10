@@ -15,8 +15,11 @@ if not string.find(package.repo, ".git", 1, true) then
     package.repo = package.repo .. ".git"
 end
 
+import("core.base.json")
+
 import("xim.libxpkg.xvm")
 import("xim.libxpkg.system")
+import("xim.libxpkg.log")
 
 local xim_datadir = path.directory(system.xpkgdir())
 local indexrepos_json = path.join(xim_datadir, "xim-index-repos", "xim-indexrepos.json")
@@ -58,16 +61,18 @@ function install()
 
     system.exec("xim --update index")
 
-    local indexrepos_content = io.readfile(indexrepos_json)
+    local indexrepos = json.loadfile(indexrepos_json)
 
-    return string.find(indexrepos_content, package.repo, 1, true)
+    log.info("verify indexrepos file: %s...", indexrepos_json)
+
+    return indexrepos[package.name]
 end
 
 function uninstall()
-    local indexrepos_content = io.readfile(indexrepos_json)
-    local pkgindex_repo = string.format([["%s":"%s",]], package.name, package.repo)
-    local new_indexrepos_content = indexrepos_content:replace(pkgindex_repo, "", { plain = true })
+    local indexrepos = json.loadfile(indexrepos_json)
+    indexrepos[package.name] = nil
+    json.savefile(indexrepos_json, indexrepos)
     xvm.remove(package.namespace .. "-" .. package.name)
     system.exec("xim --update index")
-    return true
+    return not indexrepos[package.name]
 end

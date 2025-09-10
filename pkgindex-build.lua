@@ -1,11 +1,11 @@
 package = {
     -- base info
     name = "pkgindex-update",
-    description = "SCode Package Index Update Tool",
+    description = "Awesome Package Index Update Tool",
 
     authors = "sunrisepeak",
     license = "Apache-2.0",
-    repo = "https://github.com/d2learn/xim-pkgindex-scode",
+    repo = "https://github.com/d2learn/xim-pkgindex-awesome",
 
     -- xim pkg info
     type = "auto-config",
@@ -41,10 +41,10 @@ function install()
         -- skip pkgindex-update.lua
         if not file:endswith("pkgindex-update.lua") then
             -- append template content to the end of the file
-            cprint("[${green}%d/%d${clear}] scode::%s", built_index_cnt, all_index_cnt, file)
+            cprint("[${green}%d/%d${clear}] awesome::%s", built_index_cnt, all_index_cnt, file)
             io.writefile(file, io.readfile(file) .. template_content)
         else
-            cprint("[${yellow}%d/%d${clear}] scode::%s (skip)", built_index_cnt, all_index_cnt, file)
+            cprint("[${yellow}%d/%d${clear}] awesome::%s (skip)", built_index_cnt, all_index_cnt, file)
         end
     end
     return true
