@@ -5,6 +5,12 @@
 package.type = "pkgindex"
 package.namespace = "awesome"
 
+package.xpm = {
+    linux = { ["latest"] = { } },
+    macos = { ["latest"] = { } },
+    windows = { ["latest"] = { } },
+}
+
 if not string.find(package.repo, ".git", 1, true) then
     package.repo = package.repo .. ".git"
 end
