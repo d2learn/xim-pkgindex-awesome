@@ -15,7 +15,28 @@ import("xim.libxpkg.system")
 local xim_datadir = path.directory(system.xpkgdir())
 local indexrepos_json = path.join(xim_datadir, "xim-index-repos", "xim-indexrepos.json")
 
+local pkgindex_repo_lists = {
+    -- xlings official maintain
+    xim = true,
+    awesome = true,
+    scode = true,
+    fromsource = true,
+    d2x = true,
+    template = true,
+
+    -- community maintain
+    dragonos = false,
+
+    -- personal maintain
+
+}
+
 function installed()
+
+    if pkgindex_repo_lists[package.name] then 
+        return true 
+    end
+
     local old_value = xvm.log_tag(false)
     local ret = xvm.has(package.namespace .. "-" .. package.name)
     xvm.log_tag(old_value)

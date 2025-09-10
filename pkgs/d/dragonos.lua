@@ -9,6 +9,6 @@ package = {
     license = "Apache-2.0",
     repo = "https://github.com/Sunrisepeak/xim-pkgindex-dragonos",
 
-    category = "os",
+    category = { "os", "kernel", "pkgindex" },
     keywords = { "dragonos", "linux", "embedded", "os" },
 }

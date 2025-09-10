@@ -1,12 +1,12 @@
-# xim-pkgindex-awesome
+# xim-pkgindex-awesome | [xlings](https://xlings.d2learn.org)
 
 去中心化的 [ XIM包索引仓库列表 ] 索引仓库 | Decentralized [XIM Package Index Repository List] index repository
 
 ## 简介
 
-xlings(xim)支持去中心化的包索引仓库以及对应的资源服务器, 即**每个人和组织(社区/公司/..)都可以快速搭建一套自己的软件生态, 用于在内部或公开区域进行共享分发和复用**
+**xlings(xim)**支持去中心化的包索引仓库以及对应的资源服务器, 即**每个人和组织(社区/公司/..)都可以快速搭建一套自己的软件生态, 用于在内部或公开区域进行共享分发和复用**
 
-xlings本身是一个开源的包管理工具, **支持多版本共存和管理 + 万物皆可成包的设计理念**, 他本身并不持有和控制包索引和包资源, 而只做包索引的建立和管理, 以及[xpkg包](https://xlings.d2learn.org/documents/xpkg/intro.html)的执行器
+**xlings**本身是一个开源的包管理工具, **支持多版本共存和管理 + 万物皆可成包的设计理念**, 他本身并不持有和控制包索引和包资源, 而只做包索引的建立和管理, 以及[xpkg包](https://xlings.d2learn.org/documents/xpkg/intro.html)的执行器
 
 一些可能的应用场景
 
@@ -30,11 +30,11 @@ xlings本身是一个开源的包管理工具, **支持多版本共存和管理 
 
 | 包索引仓库 | 命名空间 | 简介 |
 | --- | --- | --- |
-| [xim-pkgindex](https://github.com/d2learn/xim-pkgindex) | | xlings官方组织维护的包索引仓库 |
-| [xim-pkgindex-template](https://github.com/d2learn/xim-pkgindex-template) | xim | 自建/镜像/私有包索引模板仓库 |
-| [xim-pkgindex-fromsource](https://github.com/d2learn/xim-pkgindex-fromsource) | fromsource | 从源码构建软件的包索引仓库 |
-| [xim-pkgindex-d2x](https://github.com/d2learn/xim-pkgindex-d2x) | d2x | d2x公开课项目索引仓库 |
-| [xim-pkgindex-scode](https://github.com/d2learn/xim-pkgindex-scode) | scode | 源码资源索引仓库 |
+| [xim-pkgindex](https://github.com/d2learn/xim-pkgindex-awesome/blob/main/pkgs/x/xim.lua) | xim | xlings官方组织维护的包索引仓库 |
+| [xim-pkgindex-template](https://github.com/d2learn/xim-pkgindex-awesome/blob/main/pkgs/t/template.lua) | xim | 自建/镜像/私有包索引模板仓库 |
+| [xim-pkgindex-fromsource](https://github.com/d2learn/xim-pkgindex-awesome/blob/main/pkgs/f/fromsource.lua) | fromsource | 从源码构建软件的包索引仓库 |
+| [xim-pkgindex-d2x](https://github.com/d2learn/xim-pkgindex-awesome/blob/main/pkgs/d/d2x.lua) | d2x | d2x公开课项目索引仓库 |
+| [xim-pkgindex-scode](https://github.com/d2learn/xim-pkgindex-awesome/blob/main/pkgs/s/scode.lua) | scode | 源码资源索引仓库 |
 | [xim-pkgindex-dragonos](https://github.com/d2learn/xim-pkgindex-awesome/blob/main/pkgs/d/dragonos.lua) | dragonos | DragonOS社区软件/工具生态包索引仓库 |
 
 ## 其他
